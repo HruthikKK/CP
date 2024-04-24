@@ -1,0 +1,1 @@
+{"name":"Local: lengthOfLCSubstr","url":"d:\\DECODE\\DP\\LCS\\lengthOfLCSubstr.cpp","tests":[{"id":1709492416471,"input":"ABCDGH\nACDGHR","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DECODE\\DP\\LCS\\lengthOfLCSubstr.cpp","group":"local","local":true}

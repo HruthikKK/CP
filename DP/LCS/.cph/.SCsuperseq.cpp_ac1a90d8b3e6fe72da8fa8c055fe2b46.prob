@@ -1,0 +1,1 @@
+{"name":"Local: SCsuperseq","url":"d:\\DECODE\\DP\\LCS\\SCsuperseq.cpp","tests":[{"id":1709561459655,"input":"abac\ncab","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DECODE\\DP\\LCS\\SCsuperseq.cpp","group":"local","local":true}

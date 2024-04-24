@@ -1,0 +1,1 @@
+{"name":"Local: memoization","url":"d:\\DECODE\\DP\\01_knapsack\\memoization.cpp","tests":[{"id":1705767065571,"input":"10 20\n1 3 4 5 6 2 2 15 3 3 \n1 3 4 5 6 2 2 15 3 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DECODE\\DP\\01_knapsack\\memoization.cpp","group":"local","local":true}

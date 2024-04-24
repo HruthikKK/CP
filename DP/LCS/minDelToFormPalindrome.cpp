@@ -1,0 +1,1 @@
+// min deletion = len(str) - len(LPS)

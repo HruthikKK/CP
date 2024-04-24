@@ -1,0 +1,1 @@
+{"name":"Local: recursive","url":"d:\\DECODE\\DP\\01B_unbounded knapsack\\recursive.cpp","tests":[{"id":1705898589693,"input":"4 8  \n6 1 7 7\n1 3 4 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DECODE\\DP\\01B_unbounded knapsack\\recursive.cpp","group":"local","local":true}
