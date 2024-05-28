@@ -2,60 +2,41 @@
 using namespace std;
 #define ll long long
 
-vector<bool> p;
-set<ll int> s;
-ll int n,k;
-
-vector<bool> sieve(ll int n){
-
-    vector<bool> v(n+1,1);
-
-    v[0] = 0;v[1] = 0;
-
-    for(ll int i = 2; i<=sqrt(n); i++){
-        if(v[i]){
-            for(ll j = i*i; j<=n; j+=i) v[j] = 0; 
-        }
-    }
-
-	p = v;
-    return v;
-}
-
-bool check(ll int n){
-
-	if(2>k && (n%2 == 0)) return 1;
-	while (n%2 == 0)
-    {
-		n/=2;
-    }
- 
-    for (int i = 3; i*i <= n; i = i+2)
-    {
-        if(i>k && (n%i==0)) return 1;
-        while (n%i == 0)
-        {
-            n = n/i;
-        }
-    }
- 
-    if (n > k) return 1;
-	else return 0;
+static bool sortbyCond(const vector<ll int>& a,const vector<ll int>& b){
+    if(a[0] == b[0]) return b[1]>a[1];
+    return a[0]>b[0];
 }
 
 int main()
 {
+    ll int n;
+    cin>>n;
 
-	// vector<bool> p = sieve(n);
-	cin>>n>>k;
+    vector<vector<ll int>> v(n,vector<ll int>(2));
+    for(int i = 0; i<n; i++){
+        cin>>v[i][0];
+        v[i][1] = i;
+    }
+    sort(v.begin(),v.end(),sortbyCond);
+    
+    // for(int i =0; i<n; i++){
+    //     cout<<v[i][0]<<" "<<v[i][1]<<endl; sort(v.begin(),v.end(),sortbyCond);
+    // }
 
-	ll ans = n;
-	s.clear();
+    vector<ll int> vis(n+1,0);
 
-	for(int i = k+1; i<=n; i++){
-		if(check(i)) ans--;
-	}
+    ll int ans =0;
 
-	cout<<ans<<endl;
+    for(int i = 0; i<n; i++){
+        ll int cI = v[i][1];
+        if(!vis[cI]){
+            vis[cI] = 1;
+            vis[cI+1] = 1;
+            ans += v[i][0];
+        }
+    }
+
+    cout<<ans<<endl;
 }
+
   
