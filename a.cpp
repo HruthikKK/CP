@@ -12,6 +12,10 @@ int main()
 
     sort(v.begin(),v.end());
 
+    if(n == 1){
+        cout<<0<<endl;
+        return 0;
+    }
     // if(v[0] == v[n-1]){
     //     cout<<0<<endl;
     //     return 0;
@@ -29,6 +33,13 @@ int main()
 
         ans = toC*(n-1) - tt;
     }
+
+    ll int toC = v[n-2];
+    ll int toD = ceil((tt+0.0)/(n-1));
+
+    toC = max(toC,toD);
+
+    ans = toC*(n-1) - tt;
 
     cout<<ans<<endl;
 	
