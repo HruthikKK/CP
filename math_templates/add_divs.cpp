@@ -3,22 +3,6 @@ using namespace std;
 #define ll long long
 #define ull unsigned long long
 
-// returns a vector  of size = n+1
-vector<bool> sieve(ull int n){
-
-    vector<bool> v(n+1,1);
-
-    v[0] = 0;v[1] = 0;
-
-    for(ull int i = 2; i<=sqrt(n); i++){
-        if(v[i]){
-            for(ull j = i*i; j<=n; j+=i) v[j] = 0; 
-        }
-    }
-
-    return v;
-}
-
 // takes an int and then adds its prime factors with freq to map m;
 void add_divs(ll int x, map<ll int, ll int>& m){
     ll int i = 2;
